@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add To Fly Effect</title>
+    <style>
+        .sticky__cart {
+            position: absolute;
+            top: 5%;
+            right: 14%;
+        }
+        .container {
+            width: 70%;
+            margin: 100px auto;
+            box-shadow: 1px 1px 10px 0px #ddd;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .product__box {
+            display: flex;
+            flex-direction: column;
+        }
+        .addToCart__btn {
+            background: #ffd814;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="sticky__cart">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+            <image id="image0" width="32" height="32" x="0" y="0"
+            href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+            AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABs1BMVEUAAAAAAP8zU6IzZpkA
+            VVUdNVc0VaI1VKEcNVUaNFY1VaMzVaIaM1UbNVU3VqE1VaMbNVUcNFQ2VaI1VKMcNVYcNFU4WJ81
+            VaI1VaIrVaozM2YbNVUbNVUdM1c1VqI1VKIbNVYbNlQ7Tp01VaI1VaI3WaYYMVUbNVUbNVUiM1U1
+            VaM1VqEcNFUcNVZWxIBXxn9XxoBWxX85X6BQqohIqnRAk24hQ1hHqXRIqnVLsXZXxoBEo3JXxn9G
+            pnNYxn9JqnRWxoBJrndZxoBKrnUA/wBXxoBFonIA/wBXxoBIqXRXxoBKrnZYxH1LsnhVxnFXxn9H
+            uHFXxoBGp3NXxX9KrHZWxX5MrnZZyHpQr3VXxn9FpHJYx39Jq3ZXw31Wx4BMsXdMs3Y1VaIbNVUb
+            NlVXxn9Mo4o+c5hDoHElUFw3f2hAe5YpWl9FiZFWxX9Cn3EuZmI3gGlax35Yxn9GonFDonJuz3CO
+            3VthynmD12JgyHhGp3NLr3Z202qP3VppzXOL21xbyH1JrHZOtXlEoXF102tnzXSK211Jq3VOtHlf
+            ynl00mtZx35sznJbu3FOtHhGpXP///81bSisAAAAYXRSTlMAATcFAzVdamZZzzw8z0HMyUCwW1yv
+            IPzmBgXk/SOPfH2ODfD4FxX28g9vm5xuSqWqq/O54+j749997v7X+J3ZYp0oSAHq/QKy53i2PWoJ
+            +RLI843LU4oXMN36o90vRHZUevUx7wAAAAFiS0dEkHgKjgwAAAAJcEhZcwAAAOwAAADsAXkocb0A
+            AAAHdElNRQflCg4EFAV5/8QFAAABTElEQVQ4y62SVVcDMRBGg7u7u7u7u2uLS8KWUqC4Q3HXv0yS
+            yW7b002f+j1M7s7csw+TIOTJeHn7sMPXTyb44wB2BJIgiRCMQ9gRSsL05+E4AiCSROkK0TgGIJbE
+            6c3jExKTgJJTUtN0hHScoWImyXKdZ+fk5qmcX1BY5CIU4xL7Rykp07i8opKlqhrXcKhlqduob+DQ
+            2ISaFR4T3gQw82wRC0ALaoX+NjY5ChayA9CG2sUfdq2Owt7+AUAH6lScY3ZOF+rWRoesHB2z9okm
+            9KDePjE/PTun9eKSdq+s12LeP4DQoBBubLe03t3T9oPyKIQhuohhd8IIFUbdCWNUGJ+QC0+TbNlT
+            cmGa38aMXJjlggGEZ9sLra9MeFPeQTByYQ6Ej88vWr9/2J5+/0CYhxtfkK16UTyJJZmwLASDTDCq
+            r2pl1Z41e9aRR/IPNdzikn7S1NwAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjEtMTAtMTRUMDE6MjA6
+            MDUrMDM6MDDoM169AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIxLTEwLTE0VDAxOjIwOjA1KzAzOjAw
+            mW7mAQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII=" />
+        </svg>
+    </div>
+    <div class="container">
+        <div class="product__box">
+            <img src="https://templates.hibootstrap.com/ecop/default/assets/images/products/products21.png" alt="product 1" class="product__img">
+            <button class="addToCart__btn" onclick="handleAddToCart(this)">Add To Cart</button>
+        </div>
+        <div class="product__box">
+            <img src="https://templates.hibootstrap.com/ecop/default/assets/images/products/products15.png" alt="product 2" class="product__img">
+            <button class="addToCart__btn" onclick="handleAddToCart(this)">Add To Cart</button>
+        </div>
+        <div class="product__box">
+            <img src="https://templates.hibootstrap.com/ecop/default/assets/images/products/products16.png" alt="product 3" class="product__img">
+            <button class="addToCart__btn" onclick="handleAddToCart(this)">Add To Cart</button>
+        </div>
+    </div>
+
+    <script>
+        function move(flyerClone, coords, flyerMain, flyingToVar, time) {
+            const moveY = flyingToVar.top - coords.top;
+            const moveX = flyingToVar.left - coords.left;
+            const changeWidth = (flyerMain.width / 3) - flyerMain.width;
+            const changeHeight = (flyerMain.height / 3) - flyerMain.height;
+
+            let top = coords.top;
+            let left = coords.left;
+            let width = flyerMain.width;
+            let height = flyerMain.height;
+
+            function frame() {
+                left = left + ((moveX * 10) / time)
+                top = top + ((moveY * 10) / time)
+                width = width + ((changeWidth * 10) / time)
+                height = height + ((changeHeight * 10) / time)
+
+                flyerClone.style.width = width + 'px';
+                flyerClone.style.height = height + 'px';
+                flyerClone.style.top = Math.round(top) + 'px';
+                flyerClone.style.left = Math.round(left - 50) + 'px';
+
+                if (Math.round(top) == Math.round(flyingToVar.top) && Math.round(left) == Math.round(flyingToVar.left)) {
+                    setTimeout(() => {
+                        flyerClone.remove();
+                    }, 500);
+
+                    return clearInterval(id);
+                }
+            }
+
+            let id = setInterval(frame, 10) // draw every 10ms
+        }
+
+        // get coords function
+        function getCoords(elem) {
+            let box = elem.getBoundingClientRect();
+
+            return {
+                top: box.top + window.pageYOffset,
+                left: box.left + window.pageXOffset,
+                right: box.right + window.pageXOffset,
+                bottom: box.bottom + window.pageYOffset,
+            };
+        }
+
+        // main hook
+        const useProductImgFly = (flyer, flyingTo) => {
+            var flyerClone = flyer.cloneNode();
+            var flyingToVar = getCoords(flyingTo);
+            var flyerMain = flyer.getBoundingClientRect();
+            var body = typeof window !== undefined && document.getElementsByTagName('body')[0];
+
+            // get coords
+            let coords = getCoords(flyer);
+
+            flyerClone.style.cssText = `
+                opacity: 0.8;
+                z-index: 1200;
+                position: absolute;
+                top: ${coords.top}px;
+                left: ${coords.left}px;
+            `;
+
+            body.appendChild(flyerClone);
+
+            // call move function
+            move(flyerClone, coords, flyerMain, flyingToVar, 750);
+        };
+
+        // implementation code
+        const stickyCart = document.querySelector('.sticky__cart');
+        function handleAddToCart(e) {
+            const parent = e.parentNode;
+            const img = parent.querySelector('.product__img')
+            useProductImgFly(img, stickyCart)
+        }
+    </script>
+    
+</body>
+</html>
